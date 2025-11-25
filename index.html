@@ -1,1 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NiiCkHT40 · Gamer & Creator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top left, #1d273b, #020617 55%, #020617 100%);
+      min-height: 100vh;
+    }
+    .font-orbitron {
+      font-family: "Orbitron", system-ui, sans-serif;
+    }
+  </style>
+</head>
+
+<body class="text-slate-100 antialiased">
+  <!-- Background gradient blur -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-40 -left-32 h-72 w-72 rounded-full bg-indigo-500/40 blur-3xl"></div>
+    <div class="absolute -bottom-40 -right-32 h-80 w-80 rounded-full bg-cyan-500/30 blur-3xl"></div>
+  </div>
+
+  <!-- App Window -->
+  <div class="max-w-6xl mx-auto px-3 sm:px-4 lg:px-0 py-4 sm:py-8 pb-24 md:pb-8">
+    <div
+      class="bg-slate-950/80 border border-slate-800/60 rounded-3xl shadow-[0_20px_70px_rgba(15,23,42,0.9)] backdrop-blur-xl flex flex-col md:flex-row overflow-hidden"
+    >
+      <!-- Sidebar (desktop / tablet) -->
+      <aside
+        class="hidden md:flex md:w-64 lg:w-72 flex-col justify-between bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950/90 border-r border-slate-800/70 p-5"
+      >
+        <!-- Top: Logo & Nav -->
+        <div>
+          <!-- Logo -->
+          <div class="mb-8">
+            <div class="inline-flex items-center gap-2">
+              <div
+                class="h-10 w-10 rounded-2xl bg-gradient-to-br from-cyan-400 via-sky-300 to-indigo-500 shadow-[0_0_25px_rgba(56,189,248,0.7)] flex items-center justify-center"
+              >
+                <span class="font-orbitron text-lg font-semibold text-slate-950">N</span>
+              </div>
+              <div class="leading-tight">
+                <div class="font-orbitron text-sm tracking-[0.2em] text-cyan-300 drop-shadow-[0_0_10px_rgba(34,211,238,0.9)]">
+                  NiiCkHT40
+                </div>
+                <p class="text-[11px] text-slate-400/80">Gamer & Content Creator</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nav -->
+          <nav class="flex flex-col gap-2 text-sm">
+            <!-- item -->
+            <a
+              href="#home"
+              class="group relative inline-flex items-center gap-3 px-3 py-2.5 rounded-2xl bg-slate-900/80 shadow-[6px_6px_14px_rgba(15,23,42,0.9),-4px_-4px_10px_rgba(51,65,85,0.6)] border border-slate-800/80 transition-all duration-200 hover:bg-slate-800/80 hover:border-cyan-400/60 hover:shadow-[0_0_30px_rgba(34,211,238,0.35)] active:scale-95 active:shadow-inner"
+            >
+              <span
+                class="h-7 w-7 rounded-xl bg-gradient-to-br from-cyan-400/70 to-sky-500/70 flex items-center justify-center text-slate-950"
+              >
+                <i class="fa-solid fa-house text-xs"></i>
+              </span>
+              <span class="font-medium tracking-wide text-slate-100">Home</span>
+            </a>
+
+            <a
+              href="#heroes"
+              class="group inline-flex items-center gap-3 px-3 py-2.5 rounded-2xl bg-slate-900/80 shadow-[6px_6px_14px_rgba(15,23,42,0.9),-4px_-4px_10px_rgba(51,65,85,0.6)] border border-slate-900 transition-all duration-200 hover:bg-slate-800/80 hover:border-indigo-400/60 hover:shadow-[0_0_30px_rgba(129,140,248,0.4)] active:scale-95 active:shadow-inner"
+            >
+              <span class="h-7 w-7 rounded-xl bg-slate-800 flex items-center justify-center text-indigo-300">
+                <i class="fa-solid fa-dragon text-xs"></i>
+              </span>
+              <span class="font-medium tracking-wide text-slate-200">Heroes</span>
+            </a>
+
+            <a
+              href="#highlights"
+              class="group inline-flex items-center gap-3 px-3 py-2.5 rounded-2xl bg-slate-900/80 shadow-[6px_6px_14px_rgba(15,23,42,0.9),-4px_-4px_10px_rgba(51,65,85,0.6)] border border-slate-900 transition-all duration-200 hover:bg-slate-800/80 hover:border-fuchsia-400/70 hover:shadow-[0_0_26px_rgba(232,121,249,0.55)] active:scale-95 active:shadow-inner"
+            >
+              <span class="h-7 w-7 rounded-xl bg-slate-800 flex items-center justify-center text-pink-300">
+                <i class="fa-solid fa-film text-xs"></i>
+              </span>
+              <span class="font-medium tracking-wide text-slate-200">Highlights</span>
+            </a>
+
+            <a
+              href="#music"
+              class="group inline-flex items-center gap-3 px-3 py-2.5 rounded-2xl bg-slate-900/80 shadow-[6px_6px_14px_rgba(15,23,42,0.9),-4px_-4px_10px_rgba(51,65,85,0.6)] border border-slate-900 transition-all duration-200 hover:bg-slate-800/80 hover:border-cyan-400/70 hover:shadow-[0_0_26px_rgba(34,211,238,0.6)] active:scale-95 active:shadow-inner"
+            >
+              <span class="h-7 w-7 rounded-xl bg-slate-800 flex items-center justify-center text-cyan-300">
+                <i class="fa-solid fa-music text-xs"></i>
+              </span>
+              <span class="font-medium tracking-wide text-slate-200">Music</span>
+            </a>
+
+            <a
+              href="#contact"
+              class="group inline-flex items-center gap-3 px-3 py-2.5 rounded-2xl bg-slate-900/80 shadow-[6px_6px_14px_rgba(15,23,42,0.9),-4px_-4px_10px_rgba(51,65,85,0.6)] border border-slate-900 transition-all duration-200 hover:bg-slate-800/80 hover:border-emerald-400/70 hover:shadow-[0_0_26px_rgba(16,185,129,0.55)] active:scale-95 active:shadow-inner"
+            >
+              <span class="h-7 w-7 rounded-xl bg-slate-800 flex items-center justify-center text-emerald-300">
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+              </span>
+              <span class="font-medium tracking-wide text-slate-200">Contact</span>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Bottom profile -->
+        <div class="mt-8 pt-4 border-t border-slate-800/80">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-tr from-slate-700 via-slate-500 to-slate-300 overflow-hidden">
+              <div class="h-full w-full flex items-center justify-center text-xl">😶‍🌫️</div>
+            </div>
+            <div class="flex-1">
+              <div class="text-sm font-medium text-slate-100">NiiCkHT40</div>
+              <div class="text-[11px] text-slate-400/90">Keeping it quiet.</div>
+            </div>
+            <i class="fa-solid fa-ellipsis text-slate-500 text-xs"></i>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main id="home" class="flex-1 px-4 sm:px-6 lg:px-8 py-4 sm:py-5 space-y-6 overflow-hidden">
+        <!-- Top bar (mobile only) -->
+        <div class="flex items-center justify-between md:hidden mb-2">
+          <div class="flex items-center gap-2">
+            <div
+              class="h-9 w-9 rounded-2xl bg-gradient-to-br from-cyan-400 via-sky-300 to-indigo-500 shadow-[0_0_18px_rgba(56,189,248,0.7)] flex items-center justify-center"
+            >
+              <span class="font-orbitron text-sm font-semibold text-slate-950">N</span>
+            </div>
+            <div>
+              <div class="font-orbitron text-xs tracking-[0.22em] text-cyan-300">NiiCkHT40</div>
+              <p class="text-[10px] text-slate-400/80">Gamer & Creator</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 text-slate-400">
+            <button class="h-8 w-8 rounded-xl bg-slate-900/90 flex items-center justify-center border border-slate-700">
+              <i class="fa-regular fa-bell text-xs"></i>
+            </button>
+            <button class="h-8 w-8 rounded-full bg-slate-800 flex items-center justify-center text-xs">😶‍🌫️</button>
+          </div>
+        </div>
+
+        <!-- HERO + Intro -->
+        <section class="space-y-4" id="heroes">
+          <!-- Intro text -->
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.25em] text-slate-500 font-medium mb-1">Personal dashboard</p>
+              <h1 class="font-orbitron text-xl sm:text-2xl tracking-widest text-slate-50">
+                Chill player. Sharp plays.
+              </h1>
+              <p class="text-xs sm:text-[13px] text-slate-400 mt-1">
+                A quiet corner for my roles, edits & covers.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 text-[11px] text-slate-400">
+              <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-slate-900/80 border border-slate-700/80">
+                <span class="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]"></span>
+                <span>Silent online</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Slanted Hero section -->
+          <div
+            class="relative mt-3 rounded-3xl bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-slate-950/95 border border-slate-800/80 px-3 sm:px-4 py-4 sm:py-5 shadow-[0_20px_60px_rgba(15,23,42,0.9)] overflow-hidden"
+          >
+            <!-- subtle glow -->
+            <div class="pointer-events-none absolute -right-32 -top-24 h-64 w-64 rounded-full bg-cyan-500/15 blur-3xl"></div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2 text-[11px] text-slate-400">
+                <i class="fa-solid fa-gamepad-modern text-cyan-400"></i>
+                <span>MLBB Roles</span>
+              </div>
+              <div class="text-[11px] text-slate-500 flex items-center gap-2">
+                <span>Swipe to see all</span>
+                <span class="inline-flex -space-x-1">
+                  <span class="h-1 w-4 rounded-full bg-slate-700"></span>
+                  <span class="h-1 w-4 rounded-full bg-slate-600"></span>
+                  <span class="h-1 w-4 rounded-full bg-cyan-400"></span>
+                </span>
+              </div>
+            </div>
+
+            <!-- skewed columns -->
+            <div class="flex gap-3 sm:gap-4 md:gap-5 transform skew-x-[-10deg]">
+              <!-- Card 1 -->
+              <article
+                class="group flex-1 flex flex-col transition-all duration-300 ease-out hover:flex-[1.3] cursor-pointer"
+              >
+                <div
+                  class="h-56 sm:h-64 rounded-3xl overflow-hidden bg-gradient-to-br from-sky-500/20 via-slate-900 to-slate-900/95 border border-slate-700/80 shadow-[0_16px_45px_rgba(12,74,110,0.75)] relative transform skew-x-[10deg]"
+                >
+                  <img
+                    src="https://images.pexels.com/photos/7915251/pexels-photo-7915251.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Main hero"
+                    class="absolute inset-0 h-full w-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+
+                  <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-950/80 border border-slate-700/70 text-[10px] text-slate-300 flex items-center gap-1">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    Role · Main
+                  </div>
+
+                  <div class="absolute bottom-3 left-3 right-3">
+                    <h3 class="font-orbitron text-lg tracking-[0.18em] text-slate-50 mb-1">
+                      MAIN
+                    </h3>
+                    <p class="text-[11px] text-slate-300/85">
+                      Calm but aggressive when needed. Burst damage & clutch moments.
+                    </p>
+                  </div>
+
+                  <div
+                    class="absolute top-3 right-3 h-7 w-7 rounded-full bg-slate-950/80 flex items-center justify-center text-[11px] text-cyan-300 border border-cyan-400/70 shadow-[0_0_14px_rgba(34,211,238,0.8)]"
+                  >
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article
+                class="group flex-1 flex flex-col transition-all duration-300 ease-out hover:flex-[1.3] cursor-pointer"
+              >
+                <div
+                  class="h-56 sm:h-64 rounded-3xl overflow-hidden bg-gradient-to-br from-amber-400/10 via-slate-900 to-slate-900/95 border border-slate-700/80 shadow-[0_16px_45px_rgba(180,83,9,0.75)] relative transform skew-x-[10deg]"
+                >
+                  <img
+                    src="https://images.pexels.com/photos/9072388/pexels-photo-9072388.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Jungle hero"
+                    class="absolute inset-0 h-full w-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent"></div>
+
+                  <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-950/80 border border-slate-700/70 text-[10px] text-slate-300 flex items-center gap-1">
+                    <span class="h-1.5 w-1.5 rounded-full bg-yellow-300"></span>
+                    Role · Jungle
+                  </div>
+
+                  <div class="absolute bottom-3 left-3 right-3">
+                    <h3 class="font-orbitron text-lg tracking-[0.18em] text-slate-50 mb-1">
+                      JUNGLE
+                    </h3>
+                    <p class="text-[11px] text-slate-300/85">
+                      Rotating quietly. Securing objectives, not attention.
+                    </p>
+                  </div>
+
+                  <div
+                    class="absolute top-3 right-3 h-7 w-7 rounded-full bg-slate-950/80 flex items-center justify-center text-[11px] text-amber-300 border border-amber-400/80 shadow-[0_0_14px_rgba(251,191,36,0.85)]"
+                  >
+                    <i class="fa-solid fa-skull-crossbones"></i>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article
+                class="group flex-1 flex flex-col transition-all duration-300 ease-out hover:flex-[1.3] cursor-pointer"
+              >
+                <div
+                  class="h-56 sm:h-64 rounded-3xl overflow-hidden bg-gradient-to-br from-fuchsia-500/15 via-slate-900 to-slate-900/95 border border-slate-700/80 shadow-[0_16px_45px_rgba(162,28,175,0.7)] relative transform skew-x-[10deg]"
+                >
+                  <img
+                    src="https://images.pexels.com/photos/7915353/pexels-photo-7915353.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Roam hero"
+                    class="absolute inset-0 h-full w-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent"></div>
+
+                  <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-950/80 border border-slate-700/70 text-[10px] text-slate-300 flex items-center gap-1">
+                    <span class="h-1.5 w-1.5 rounded-full bg-fuchsia-300"></span>
+                    Role · Roam
+                  </div>
+
+                  <div class="absolute bottom-3 left-3 right-3">
+                    <h3 class="font-orbitron text-lg tracking-[0.18em] text-slate-50 mb-1">
+                      ROAM
+                    </h3>
+                    <p class="text-[11px] text-slate-300/85">
+                      Setting vision, saving teammates, staying unnoticed.
+                    </p>
+                  </div>
+
+                  <div
+                    class="absolute top-3 right-3 h-7 w-7 rounded-full bg-slate-950/80 flex items-center justify-center text-[11px] text-fuchsia-300 border border-fuchsia-400/80 shadow-[0_0_14px_rgba(217,70,239,0.8)]"
+                  >
+                    <i class="fa-solid fa-shield-heart"></i>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Highlights Section -->
+        <section id="highlights" class="space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="font-orbitron text-sm tracking-[0.25em] uppercase text-slate-100">Highlights</h2>
+              <div class="mt-1 h-0.5 w-16 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-400 to-fuchsia-400 shadow-[0_0_16px_rgba(56,189,248,0.9)]"></div>
+            </div>
+            <p class="text-[11px] text-slate-500">Latest edits & clips</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Highlight card 1 -->
+            <article
+              class="relative rounded-3xl bg-gradient-to-br from-slate-900/95 via-slate-900 to-slate-950 border border-slate-800/80 overflow-hidden shadow-[0_16px_50px_rgba(15,23,42,0.9)] group"
+            >
+              <div class="relative h-40 overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.4),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(129,140,248,0.45),_transparent_55%)] opacity-80"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-4xl text-slate-100/80">
+                  <i class="fa-brands fa-tiktok drop-shadow-[0_0_18px_rgba(248,250,252,0.6)]"></i>
+                </div>
+                <button
+                  class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-slate-950/80 px-3 py-1.5 text-[11px] font-medium text-slate-50 border border-cyan-400/70 shadow-[0_0_18px_rgba(34,211,238,0.7)] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200"
+                >
+                  <i class="fa-solid fa-play text-[9px]"></i>
+                  Watch Now
+                </button>
+              </div>
+              <div class="p-3.5 space-y-1.5">
+                <div class="flex items-center justify-between text-[11px] text-slate-400">
+                  <span>MLBB · Night queue</span>
+                  <span>01:32</span>
+                </div>
+                <h3 class="text-sm font-semibold text-slate-50">
+                  Silent but Savage — Ranked Night Highlights
+                </h3>
+                <p class="text-[11px] text-slate-400">
+                  A few clean picks, some messy fights, and one clutch steal.
+                </p>
+              </div>
+            </article>
+
+            <!-- Highlight card 2 -->
+            <article
+              class="relative rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-slate-800/80 overflow-hidden shadow-[0_16px_50px_rgba(15,23,42,0.9)] group"
+            >
+              <div class="relative h-40 overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(251,113,133,0.5),_transparent_55%),radial-gradient(circle_at_bottom_right,_rgba(129,140,248,0.55),_transparent_55%)] opacity-80"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-4xl text-slate-100/90">
+                  <i class="fa-brands fa-youtube drop-shadow-[0_0_20px_rgba(248,113,113,0.7)]"></i>
+                </div>
+                <button
+                  class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-slate-950/80 px-3 py-1.5 text-[11px] font-medium text-slate-50 border border-fuchsia-400/70 shadow-[0_0_18px_rgba(217,70,239,0.7)] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200"
+                >
+                  <i class="fa-solid fa-play text-[9px]"></i>
+                  Watch Now
+                </button>
+              </div>
+              <div class="p-3.5 space-y-1.5">
+                <div class="flex items-center justify-between text-[11px] text-slate-400">
+                  <span>Montage · 4K</span>
+                  <span>02:10</span>
+                </div>
+                <h3 class="text-sm font-semibold text-slate-50">
+                  Slow-Mo Burst — Edit 01
+                </h3>
+                <p class="text-[11px] text-slate-400">
+                  A calm edit with soft transitions and synced beats.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Music Section -->
+        <section id="music" class="space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="font-orbitron text-sm tracking-[0.25em] uppercase text-slate-100">Music & Covers</h2>
+              <div class="mt-1 h-0.5 w-20 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 shadow-[0_0_16px_rgba(56,189,248,0.9)]"></div>
+            </div>
+            <p class="text-[11px] text-slate-500">Just visual players · no audio</p>
+          </div>
+
+          <div class="space-y-3">
+            <!-- Audio Card -->
+            <article
+              class="relative overflow-hidden rounded-3xl bg-slate-900/70 border border-slate-700/70 backdrop-blur-xl shadow-[0_18px_65px_rgba(15,23,42,0.95)]"
+            >
+              <div class="absolute inset-0 bg-gradient-to-r from-blue-500/25 via-cyan-500/20 to-indigo-500/20"></div>
+              <div class="relative flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 px-4 py-3.5">
+                <div class="flex items-center gap-3 flex-1">
+                  <div
+                    class="h-12 w-12 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-sky-300 shadow-[0_0_25px_rgba(56,189,248,0.8)] flex items-center justify-center overflow-hidden"
+                  >
+                    <i class="fa-solid fa-headphones text-slate-950 text-lg"></i>
+                  </div>
+                  <div>
+                    <div class="text-[13px] font-semibold text-slate-50">Cover by NiiCk</div>
+                    <div class="text-[11px] text-slate-300/90">
+                      Lo-fi MLBB theme · Night queue vibes
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex-1 space-y-2">
+                  <!-- Progress bar -->
+                  <div class="relative h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                    <div class="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
+                    <div
+                      class="absolute -top-1.5 left-2/3 h-4 w-4 rounded-full bg-white shadow-[0_0_15px_rgba(56,189,248,0.9)] border border-cyan-400"
+                    ></div>
+                  </div>
+                  <!-- Controls -->
+                  <div class="flex items-center justify-between text-slate-200">
+                    <span class="text-[11px] text-slate-300/80">01:24</span>
+                    <div class="flex items-center gap-3">
+                      <button
+                        class="h-7 w-7 rounded-full bg-slate-900/90 flex items-center justify-center text-[10px] border border-slate-700/80"
+                      >
+                        <i class="fa-solid fa-backward"></i>
+                      </button>
+                      <button
+                        class="h-9 w-9 rounded-full bg-gradient-to-tr from-cyan-400 via-sky-400 to-blue-500 flex items-center justify-center text-slate-950 shadow-[0_0_26px_rgba(56,189,248,0.9)]"
+                      >
+                        <i class="fa-solid fa-play text-sm ml-0.5"></i>
+                      </button>
+                      <button
+                        class="h-7 w-7 rounded-full bg-slate-900/90 flex items-center justify-center text-[10px] border border-slate-700/80"
+                      >
+                        <i class="fa-solid fa-forward"></i>
+                      </button>
+                    </div>
+                    <span class="text-[11px] text-slate-400/80">03:09</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Audio Card 2 -->
+            <article
+              class="relative overflow-hidden rounded-3xl bg-slate-900/70 border border-slate-700/70 backdrop-blur-xl shadow-[0_18px_65px_rgba(15,23,42,0.95)]"
+            >
+              <div class="absolute inset-0 bg-gradient-to-r from-fuchsia-500/20 via-indigo-500/15 to-emerald-400/10"></div>
+              <div class="relative flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 px-4 py-3.5">
+                <div class="flex items-center gap-3 flex-1">
+                  <div
+                    class="h-12 w-12 rounded-full bg-gradient-to-tr from-fuchsia-500 via-purple-500 to-blue-500 shadow-[0_0_25px_rgba(217,70,239,0.8)] flex items-center justify-center overflow-hidden"
+                  >
+                    <i class="fa-solid fa-microphone text-slate-50 text-lg"></i>
+                  </div>
+                  <div>
+                    <div class="text-[13px] font-semibold text-slate-50">Soft cover</div>
+                    <div class="text-[11px] text-slate-300/90">
+                      Chill lyrics over slow game footage.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex-1 space-y-2">
+                  <div class="relative h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                    <div class="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-fuchsia-400 to-indigo-400"></div>
+                    <div
+                      class="absolute -top-1.5 left-1/3 h-4 w-4 rounded-full bg-white shadow-[0_0_15px_rgba(217,70,239,0.9)] border border-fuchsia-400"
+                    ></div>
+                  </div>
+                  <div class="flex items-center justify-between text-slate-200">
+                    <span class="text-[11px] text-slate-300/80">00:48</span>
+                    <div class="flex items-center gap-3">
+                      <button
+                        class="h-7 w-7 rounded-full bg-slate-900/90 flex items-center justify-center text-[10px] border border-slate-700/80"
+                      >
+                        <i class="fa-solid fa-backward"></i>
+                      </button>
+                      <button
+                        class="h-9 w-9 rounded-full bg-gradient-to-tr from-fuchsia-500 via-purple-500 to-blue-500 flex items-center justify-center text-slate-50 shadow-[0_0_26px_rgba(217,70,239,0.9)]"
+                      >
+                        <i class="fa-solid fa-pause text-sm"></i>
+                      </button>
+                      <button
+                        class="h-7 w-7 rounded-full bg-slate-900/90 flex items-center justify-center text-[10px] border border-slate-700/80"
+                      >
+                        <i class="fa-solid fa-forward"></i>
+                      </button>
+                    </div>
+                    <span class="text-[11px] text-slate-400/80">02:21</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="pt-1 pb-2">
+          <div
+            class="mt-4 rounded-3xl bg-slate-950/70 border border-slate-800/80 px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-[0_16px_40px_rgba(15,23,42,0.9)]"
+          >
+            <div class="space-y-1 text-center sm:text-left">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-slate-500">Contact / Connect</p>
+              <h3 class="text-sm font-semibold text-slate-50">
+                Want to play, scrim or collab?
+              </h3>
+              <p class="text-[11px] text-slate-400">
+                DM first. If I’m quiet, I’m probably in-game.
+              </p>
+            </div>
+            <div class="flex flex-wrap justify-center sm:justify-end gap-2">
+              <a
+                href="#"
+                class="inline-flex items-center gap-1.5 rounded-full bg-slate-900 px-3 py-1.5 text-[11px] border border-slate-700 hover:border-cyan-400 hover:text-cyan-200 transition-all"
+              >
+                <i class="fa-brands fa-telegram"></i>
+                Telegram
+              </a>
+              <a
+                href="#"
+                class="inline-flex items-center gap-1.5 rounded-full bg-slate-900 px-3 py-1.5 text-[11px] border border-slate-700 hover:border-pink-400 hover:text-pink-200 transition-all"
+              >
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+              </a>
+              <a
+                href="#"
+                class="inline-flex items-center gap-1.5 rounded-full bg-slate-900 px-3 py-1.5 text-[11px] border border-slate-700 hover:border-emerald-400 hover:text-emerald-200 transition-all"
+              >
+                <i class="fa-brands fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <p class="mt-3 text-[10px] text-center text-slate-500">
+            Designed for <span class="font-semibold text-slate-300">NiiCkHT40</span> · Minimal gamer dashboard · Tailwind + Orbitron.
+          </p>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Bottom nav (mobile only) -->
+  <nav
+    class="md:hidden fixed bottom-0 inset-x-0 z-20 bg-slate-950/95 border-t border-slate-800/80 backdrop-blur-xl"
+  >
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between py-2.5 text-[11px] text-slate-300">
+        <a href="#home" class="flex-1 flex flex-col items-center gap-0.5">
+          <i class="fa-solid fa-house text-sm"></i>
+          <span>Home</span>
+        </a>
+        <a href="#heroes" class="flex-1 flex flex-col items-center gap-0.5">
+          <i class="fa-solid fa-dragon text-sm"></i>
+          <span>Heroes</span>
+        </a>
+        <a href="#highlights" class="flex-1 flex flex-col items-center gap-0.5">
+          <i class="fa-solid fa-film text-sm"></i>
+          <span>Clips</span>
+        </a>
+        <a href="#music" class="flex-1 flex flex-col items-center gap-0.5">
+          <i class="fa-solid fa-music text-sm"></i>
+          <span>Music</span>
+        </a>
+        <a href="#contact" class="flex-1 flex flex-col items-center gap-0.5">
+          <i class="fa-solid fa-paper-plane text-sm"></i>
+          <span>Contact</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>
